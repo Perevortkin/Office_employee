@@ -1,9 +1,9 @@
-#include "Company.h"
+п»ї#include "Company.h"
 
 int main()
 {   
-	Company comp; //создаем объект типа Firma
-	string namef= "company.sps"; //задаем имя файла для выгрузки/загрузки коллекции
+	Company comp; //СЃРѕР·РґР°РµРј РѕР±СЉРµРєС‚ С‚РёРїР° Firma
+	string namef= "company.sps"; //Р·Р°РґР°РµРј РёРјСЏ С„Р°Р№Р»Р° РґР»СЏ РІС‹РіСЂСѓР·РєРё/Р·Р°РіСЂСѓР·РєРё РєРѕР»Р»РµРєС†РёРё
 	int key;
 	char s;
 L1:	cout<<"---------Input operation-----------\n";

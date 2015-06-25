@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 #include "worker.h"
 class FixWorker : public Worker
 {
@@ -6,12 +6,12 @@ protected:
 	double fix_zp;
 public:
 	FixWorker();
-	FixWorker(const FixWorker&); //конструктор копирования
-	FixWorker(int,string, double); //конструктор с параметрами
+	FixWorker(const FixWorker&); //РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєРѕРїРёСЂРѕРІР°РЅРёСЏ
+	FixWorker(int,string, double); //РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃ РїР°СЂР°РјРµС‚СЂР°РјРё
 	virtual ~FixWorker();
-	void CalcZp(void){zp=fix_zp;} //Расчет ЗП
-	friend ostream& operator<<(ostream&,const FixWorker&); //перегрузка << для вывода в консоль
-	friend ofstream& operator<<(ofstream&, FixWorker* );//перегрузка << для вывода в файл
-	friend ifstream& operator>>(ifstream&, FixWorker*); //перегрузка >> для ввода из файла
+	void CalcZp(void){zp=fix_zp;} //Р Р°СЃС‡РµС‚ Р—Рџ
+	friend ostream& operator<<(ostream&,const FixWorker&); //РїРµСЂРµРіСЂСѓР·РєР° << РґР»СЏ РІС‹РІРѕРґР° РІ РєРѕРЅСЃРѕР»СЊ
+	friend ofstream& operator<<(ofstream&, FixWorker* );//РїРµСЂРµРіСЂСѓР·РєР° << РґР»СЏ РІС‹РІРѕРґР° РІ С„Р°Р№Р»
+	friend ifstream& operator>>(ifstream&, FixWorker*); //РїРµСЂРµРіСЂСѓР·РєР° >> РґР»СЏ РІРІРѕРґР° РёР· С„Р°Р№Р»Р°
 };
 

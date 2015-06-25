@@ -1,10 +1,10 @@
-
+ï»¿
 #include "TimeWorker.h"
 
 
 TimeWorker::TimeWorker():Worker(),hour_rate(0){}
 
-TimeWorker::TimeWorker(int id, string nam, double pay) //êîíñòðóêòîð ñ ïàðàìåòðàìè
+TimeWorker::TimeWorker(int id, string nam, double pay) //ÐºÐ¾Ð½ÑÑ‚Ñ€ÑƒÐºÑ‚Ð¾Ñ€ Ñ Ð¿Ð°Ñ€Ð°Ð¼ÐµÑ‚Ñ€Ð°Ð¼Ð¸
 {
   ident = id;
   name=nam;
@@ -12,7 +12,7 @@ TimeWorker::TimeWorker(int id, string nam, double pay) //êîíñòðóêòîð ñ ïàðàìåòðà
   CalcZp();
 }
 
-TimeWorker::TimeWorker(const TimeWorker& TW) //Êîíñòðóêòîð êîïèðîâàíèÿ
+TimeWorker::TimeWorker(const TimeWorker& TW) //ÐšÐ¾Ð½ÑÑ‚Ñ€ÑƒÐºÑ‚Ð¾Ñ€ ÐºÐ¾Ð¿Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð¸Ñ
 {
 	this->hour_rate =TW.hour_rate;
 	this->ident=TW.ident;
@@ -24,19 +24,19 @@ TimeWorker::~TimeWorker()
 {
 }
 
-ostream& operator<<(ostream& obj,const TimeWorker& TW) //ïåðåãðóçêà << äëÿ âûâîäà â êîíñîëü
+ostream& operator<<(ostream& obj,const TimeWorker& TW) //Ð¿ÐµÑ€ÐµÐ³Ñ€ÑƒÐ·ÐºÐ° << Ð´Ð»Ñ Ð²Ñ‹Ð²Ð¾Ð´Ð° Ð² ÐºÐ¾Ð½ÑÐ¾Ð»ÑŒ
 {
 	 	  cout<<TW.ident<<"  "<<TW.name<<"  "<<TW.hour_rate<<"  "<<TW.zp;
 return obj;
 }
 
-ofstream& operator<<(ofstream& obj, TimeWorker* TW ) //ïåðåãðóçêà << äëÿ âûâîäà äàííûõ â ôàéë
+ofstream& operator<<(ofstream& obj, TimeWorker* TW ) //Ð¿ÐµÑ€ÐµÐ³Ñ€ÑƒÐ·ÐºÐ° << Ð´Ð»Ñ Ð²Ñ‹Ð²Ð¾Ð´Ð° Ð´Ð°Ð½Ð½Ñ‹Ñ… Ð² Ñ„Ð°Ð¹Ð»
 {
 	 	obj<<TW->ident<<" "<<TW->name<<" "<<TW->hour_rate<<"\n";
 return obj;
 }
 
-ifstream& operator>>(ifstream& obj, TimeWorker* TW ) //ïåðåãðóçêà >> äëÿ ââîäà äàííûõ èç ôàéëà
+ifstream& operator>>(ifstream& obj, TimeWorker* TW ) //Ð¿ÐµÑ€ÐµÐ³Ñ€ÑƒÐ·ÐºÐ° >> Ð´Ð»Ñ Ð²Ð²Ð¾Ð´Ð° Ð´Ð°Ð½Ð½Ñ‹Ñ… Ð¸Ð· Ñ„Ð°Ð¹Ð»Ð°
 {
 	 	obj>>TW->ident>>TW->name>>TW->hour_rate;
 		TW->CalcZp();

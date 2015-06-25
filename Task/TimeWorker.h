@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 #include "worker.h"
 class TimeWorker : public Worker
 {
@@ -6,12 +6,12 @@ protected:
 	double hour_rate;
 public:
 	TimeWorker();
-	TimeWorker(int,string, double); //конструктор с параметрами
-	TimeWorker(const TimeWorker&); //конструктор копирования
+	TimeWorker(int,string, double); //РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃ РїР°СЂР°РјРµС‚СЂР°РјРё
+	TimeWorker(const TimeWorker&); //РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєРѕРїРёСЂРѕРІР°РЅРёСЏ
 	virtual ~TimeWorker();
-	void CalcZp(void){zp=20.8*8*hour_rate;} //расчет ЗП
-	friend ostream& operator<<(ostream&,const TimeWorker&); //перегрузка << для вывода в консоль
-	friend ofstream& operator<<(ofstream&, TimeWorker* ); //перегрузка << для вывода в файл
-	friend ifstream& operator>>(ifstream&, TimeWorker* ); //перегрузка >> для ввода из файла
+	void CalcZp(void){zp=20.8*8*hour_rate;} //СЂР°СЃС‡РµС‚ Р—Рџ
+	friend ostream& operator<<(ostream&,const TimeWorker&); //РїРµСЂРµРіСЂСѓР·РєР° << РґР»СЏ РІС‹РІРѕРґР° РІ РєРѕРЅСЃРѕР»СЊ
+	friend ofstream& operator<<(ofstream&, TimeWorker* ); //РїРµСЂРµРіСЂСѓР·РєР° << РґР»СЏ РІС‹РІРѕРґР° РІ С„Р°Р№Р»
+	friend ifstream& operator>>(ifstream&, TimeWorker* ); //РїРµСЂРµРіСЂСѓР·РєР° >> РґР»СЏ РІРІРѕРґР° РёР· С„Р°Р№Р»Р°
 };
 

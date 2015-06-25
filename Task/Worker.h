@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 #include <stdio.h>
 #include <tchar.h>
 #include <vector>
@@ -9,7 +9,7 @@
 #include <iostream>
 #include <memory>
 using namespace std;
-class Worker //Абстрактный базовый класс
+class Worker //РђР±СЃС‚СЂР°РєС‚РЅС‹Р№ Р±Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ
 {
 protected:
 	string name;
@@ -19,8 +19,8 @@ public:
 	Worker();
 	Worker(Worker &&);
 	virtual ~Worker();
-	virtual void CalcZp()=0; //чистая виртуальная функция расчета ЗП (должна быть реализована в каждом классе наследнике)
-	virtual void Show(); //функция выводит информацию о работнике
+	virtual void CalcZp()=0; //С‡РёСЃС‚Р°СЏ РІРёСЂС‚СѓР°Р»СЊРЅР°СЏ С„СѓРЅРєС†РёСЏ СЂР°СЃС‡РµС‚Р° Р—Рџ (РґРѕР»Р¶РЅР° Р±С‹С‚СЊ СЂРµР°Р»РёР·РѕРІР°РЅР° РІ РєР°Р¶РґРѕРј РєР»Р°СЃСЃРµ РЅР°СЃР»РµРґРЅРёРєРµ)
+	virtual void Show(); //С„СѓРЅРєС†РёСЏ РІС‹РІРѕРґРёС‚ РёРЅС„РѕСЂРјР°С†РёСЋ Рѕ СЂР°Р±РѕС‚РЅРёРєРµ
 	bool operator<(Worker&);
 	Worker & operator=(Worker &&);
 	string Getname();

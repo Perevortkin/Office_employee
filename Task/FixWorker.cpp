@@ -1,4 +1,4 @@
-
+ï»¿
 #include "FixWorker.h"
 
 
@@ -12,7 +12,7 @@ FixWorker::FixWorker(int id, string nam, double pay)
   CalcZp();
 }
 
-FixWorker::FixWorker(const FixWorker& FW) //Êîíñòðóêòîð êîïèðîâàíèÿ
+FixWorker::FixWorker(const FixWorker& FW) //ÐšÐ¾Ð½ÑÑ‚Ñ€ÑƒÐºÑ‚Ð¾Ñ€ ÐºÐ¾Ð¿Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð¸Ñ
 {
 	this->fix_zp =FW.fix_zp;
 	this->ident=FW.ident;
@@ -24,19 +24,19 @@ FixWorker::~FixWorker()
 {
 }
 
-ostream& operator<<(ostream& obj,const FixWorker& FW) //ïåðåãðóçêà << äëÿ âûâîäà â êîíñîëü
+ostream& operator<<(ostream& obj,const FixWorker& FW) //Ð¿ÐµÑ€ÐµÐ³Ñ€ÑƒÐ·ÐºÐ° << Ð´Ð»Ñ Ð²Ñ‹Ð²Ð¾Ð´Ð° Ð² ÐºÐ¾Ð½ÑÐ¾Ð»ÑŒ
 {
 	 	  cout<<FW.ident<<"  "<<FW.name<<"  "<<FW.fix_zp<<"  "<<FW.zp;
 return obj;
 }
 
-ofstream& operator<<(ofstream& obj, FixWorker* FW ) //ïåðåãðóçêà << äëÿ âûâîäà äàííûõ â ôàéë
+ofstream& operator<<(ofstream& obj, FixWorker* FW ) //Ð¿ÐµÑ€ÐµÐ³Ñ€ÑƒÐ·ÐºÐ° << Ð´Ð»Ñ Ð²Ñ‹Ð²Ð¾Ð´Ð° Ð´Ð°Ð½Ð½Ñ‹Ñ… Ð² Ñ„Ð°Ð¹Ð»
 {
 	 	obj<<FW->ident<<" "<<FW->name<<" "<<FW->fix_zp<<"\n";
 return obj;
 }
 
-ifstream& operator>>(ifstream& obj, FixWorker* FW )  //ïåðåãðóçêà >> äëÿ ââîäà äàííûõ èç ôàéëà 
+ifstream& operator>>(ifstream& obj, FixWorker* FW )  //Ð¿ÐµÑ€ÐµÐ³Ñ€ÑƒÐ·ÐºÐ° >> Ð´Ð»Ñ Ð²Ð²Ð¾Ð´Ð° Ð´Ð°Ð½Ð½Ñ‹Ñ… Ð¸Ð· Ñ„Ð°Ð¹Ð»Ð° 
 {
 	 	obj>>FW->ident>>FW->name>>FW->fix_zp;
 		FW->CalcZp();
