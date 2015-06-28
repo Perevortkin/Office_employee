@@ -5,13 +5,16 @@ int main()
 	Company comp; //создаем объект типа Firma
 	string namef= "company.sps"; //задаем имя файла для выгрузки/загрузки коллекции
 	int key;
-	char s;
-L1:	cout<<"---------Input operation-----------\n";
+        int quit=1;
+        while (quit)
+        {
+
+        cout<<"---------Input operation-----------\n";
 	cout<<"1: Load workers with file \n";
 	cout<<"2: Wrire workers in file \n";
 	cout<<"3: Show worker \n";
 	cout<<"4: Sort workers list \n";
-    cout<<"5: Show 5 first names  workers \n";
+        cout<<"5: Show 5 first names  workers \n";
 	cout<<"6: Show 3 end identifier  workers \n";
 	cout<<"0: Exit \n";
 	cout<<"=>";
@@ -39,12 +42,12 @@ L1:	cout<<"---------Input operation-----------\n";
 		case 6:
 			comp.End3ident();
 		break;
-	}
-	cout<<" Select new operation? (y/n)=>";
-	cin>>s;
-	if(s=='y'|| s=='Y')
-		goto L1;
+                case 0: quit=0;
+                break;
 
+	}
+
+        }
 	return 0;
 }
 
